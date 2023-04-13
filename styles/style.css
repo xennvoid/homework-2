@@ -1,0 +1,175 @@
+:root {
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.7em);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    padding: 2rem;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+.main {
+    display: flex;
+}
+
+.landscapes {
+   width: 70%;
+   padding: 1em;
+}
+
+.landscapes__header {
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.landscapes__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem 0;
+}
+
+.landscapes__item {
+    font-size: .9em;
+}
+
+.landscapes__title {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.landscapes__image {
+    max-width: 100%;
+}
+
+.landscapes__description {
+    margin-top: 10px;
+    font-size: .7em;
+}
+
+.menu {
+    width: 30%;
+    background-color: aliceblue;
+}
+
+.nav {
+    
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.nav__item {
+    margin-bottom: 10px;
+    padding: .5em;
+}
+
+.nav__item:last-child {
+    margin-bottom: 0;
+}
+
+.nav__link {
+    font-size: .9em;
+    text-decoration: none;
+    color: black;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    color: red;
+    transition: all 0.5s ease;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: aquamarine;
+}
+
+.about {
+    padding: .5em;
+    text-align: center;
+}
+
+.about__list {
+
+}
+
+.about__item {
+    padding: .5em;
+    font-size: .7rem;
+    font-weight: 500;
+}
+
+.about__item:last-child {
+
+}
+
+.about__link {
+    color: black;
+}
+
+.about__copy {
+    font-size: .8rem;
+}
+
+@media screen and (min-width:600px) { 
+    
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about__list {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width:920px) {    
+
+    .landscapes__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:1rem;
+    }
+
+    .landscapes {
+        width: 80%;
+    }
+
+    .landscapes__image {
+        height: 300px;
+    }
+
+    .menu {
+        width: 20%;
+    }
+
+}
+
+@media screen and (min-width:1350px) { 
+
+    .landscapes__container {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .nav__item {
+        padding: .4em;
+    }
+
+}
